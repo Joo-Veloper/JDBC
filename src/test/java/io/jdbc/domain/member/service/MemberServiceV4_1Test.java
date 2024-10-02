@@ -2,8 +2,8 @@ package io.jdbc.domain.member.service;
 
 import io.jdbc.domain.member.entity.Member;
 import io.jdbc.domain.member.repository.MemberRepository;
-import io.jdbc.domain.member.repository.MemberRepositoryV3;
 import io.jdbc.domain.member.repository.MemberRepositoryV4_1;
+import io.jdbc.domain.member.repository.MemberRepositoryV4_2;
 import lombok.extern.slf4j.Slf4j;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.AfterEach;
@@ -16,7 +16,6 @@ import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.context.annotation.Bean;
 
 import javax.sql.DataSource;
-import java.sql.SQLException;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThatThrownBy;
@@ -29,7 +28,7 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThatThrownBy;
  */
 @Slf4j
 @SpringBootTest
-class MemberServiceV4Test {
+class MemberServiceV4_1Test {
     public static final String MEMBER_A = "memberA";
     public static final String MEMBER_B = "memberB";
     public static final String MEMBER_EX = "ex";
